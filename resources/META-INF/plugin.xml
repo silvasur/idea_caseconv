@@ -1,0 +1,76 @@
+<idea-plugin>
+  <id>me.laria.code.idea_caseconv</id>
+  <name>Case conversion</name>
+  <version>0.5</version>
+  <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
+
+  <description><![CDATA[<html>
+      <p>Convert between cases.</p>
+      <p>The Plugin provides actions to convert to the following cases:</p>
+      <ul>
+        <li>snake_case</li>
+        <li>dash-case</li>
+        <li>camelCase</li>
+        <li>PascalCase</li>
+        <li>SCREAMING_SNAKE_CASE</li>
+        <li>UPPER CASE</li>
+        <li>lower case</li>
+        <li>fLIP cASE</li>
+      </ul>
+    </html>]]></description>
+
+  <change-notes><![CDATA[]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="me.laria.code.idea_caseconv.SnakeCaseAction" class="me.laria.code.idea_caseconv.SnakeCaseAction"
+            text="Convert Case: snake__case">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.DashCaseAction" class="me.laria.code.idea_caseconv.DashCaseAction"
+            text="Convert Case: dash-case">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.SeparateWordsAction" class="me.laria.code.idea_caseconv.SeparateWordsAction"
+            text="Convert case: separate words">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.CamelCaseAction" class="me.laria.code.idea_caseconv.CamelCaseAction"
+            text="Convert Case: camelCase">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.PascalCaseAction" class="me.laria.code.idea_caseconv.PascalCaseAction"
+            text="Convert Case: PascalCase">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.ScreamingSnakeCaseAction"
+            class="me.laria.code.idea_caseconv.ScreamingSnakeCaseAction" text="Convert Case: SCREAMING__SNAKE__CASE">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.UpperCaseAction" class="me.laria.code.idea_caseconv.UpperCaseAction"
+            text="Convert Case: UPPER CASE">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.LowerCaseAction" class="me.laria.code.idea_caseconv.LowerCaseAction"
+            text="Convert Case: lower case">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.FlipCaseAction" class="me.laria.code.idea_caseconv.FlipCaseAction"
+            text="Convert Case: fLIP cASE">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
