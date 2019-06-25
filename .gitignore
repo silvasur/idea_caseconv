@@ -1,2 +1,5 @@
 Case Conversion.jar
 out/
+.gradle/
+.idea/
+build/
