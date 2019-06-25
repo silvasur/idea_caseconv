@@ -13,5 +13,6 @@ The plugin provides actions to convert to these cases:
 - `UPPER CASE`
 - `lower case`
 - `fLIP cASE`
+- `Title Case`
 
 The Plugin was inspired by the [Case Conversion Plugin for SublimeText](https://packagecontrol.io/packages/Case%20Conversion).

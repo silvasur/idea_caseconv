@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case conversion</name>
-  <version>0.5</version>
+  <version>0.5.1</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -16,6 +16,7 @@
         <li>UPPER CASE</li>
         <li>lower case</li>
         <li>fLIP cASE</li>
+        <li>Title Case</li>
       </ul>
     </html>]]></description>
 
@@ -69,6 +70,10 @@
     </action>
     <action id="me.laria.code.idea_caseconv.FlipCaseAction" class="me.laria.code.idea_caseconv.FlipCaseAction"
             text="Convert Case: fLIP cASE">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.TitleCaseAction" class="me.laria.code.idea_caseconv.TitleCaseAction"
+            text="Convert Case: Title Case">
       <add-to-group group-id="EditMenu" anchor="first"/>
     </action>
   </actions>
