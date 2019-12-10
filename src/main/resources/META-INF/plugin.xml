@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case conversion</name>
-  <version>0.5.1</version>
+  <version>0.5.2</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -17,11 +17,11 @@
         <li>lower case</li>
         <li>fLIP cASE</li>
         <li>Title Case</li>
+        <li>dot.case</li>
       </ul>
     </html>]]></description>
 
-  <change-notes><![CDATA[]]>
-  </change-notes>
+  <change-notes><![CDATA[<html><p><strong>Version 0.5.2</strong>: Add <code>Convert case: dot.case</code> action</p></html>]]></change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
@@ -74,6 +74,10 @@
     </action>
     <action id="me.laria.code.idea_caseconv.TitleCaseAction" class="me.laria.code.idea_caseconv.TitleCaseAction"
             text="Convert Case: Title Case">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+    </action>
+    <action id="me.laria.code.idea_caseconv.DotCaseAction" class="me.laria.code.idea_caseconv.DotCaseAction"
+            text="Convert Case: dot.case">
       <add-to-group group-id="EditMenu" anchor="first"/>
     </action>
   </actions>
