@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case conversion</name>
-  <version>0.6.0</version>
+  <version>0.6.1</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -19,10 +19,20 @@
         <li>Title Case</li>
         <li>dot.case</li>
       </ul>
+      <p>How to use:</p>
+      <p>Select the text you want to convert and then invoke the desired action. There are multiple ways to do this:</p>
+      <ul>
+      <li>Use the menu bar: The actions of this plugin can be found in &ldquo;Edit&rdquo; > &ldquo;Convert Case&rdquo;</li>
+      <li>Use the Find Action feature: Bring up the &ldquo;Find Action&rdquo; search dialog (default keyboard shortcut is Ctrl+Shift+A) and type the name of the desired convert action (or type &ldquo;Convert Case&rdquo; to see all actions). Tip: This search uses fuzzy matching so you can just type &ldquo;camcas&rdquo; for &ldquo;Convert Case: camelCase&rdquo;.</li>
+      <li>Create a keyboard shortcut: Open Settings > Keymap and search for &ldquo;Convert Case&rdquo; and create a keyboard shortcut for the desired action.</li>
+      </ul>
     </html>]]></description>
 
   <change-notes><![CDATA[<html>
     <dl>
+      <dt>Version 0.6.1</dt>
+      <dd>Add a short documentation on how to use the plugin</dd>
+
       <dt>Version 0.6.0</dt>
       <dd>Organize Convert case actions into new Edit submenu "Convert case" instead of cluttering up the edit menu</dd>
 

@@ -18,6 +18,22 @@ The plugin provides actions to convert to these cases:
 
 The Plugin was inspired by the [Case Conversion Plugin for SublimeText](https://packagecontrol.io/packages/Case%20Conversion).
 
+How to use
+----------
+
+Select the text you want to convert and then invoke the desired action.
+There are multiple ways to do this:
+
+- Use the menu bar: The actions of this plugin can be found in
+  "Edit" > "Convert Case"
+- Use the Find Action feature: Bring up the "Find Action" search dialog
+  (default keyboard shortcut is Ctrl+Shift+A) and type the name of the
+  desired convert action (or type "Convert Case" to see all actions).
+  Tip: This search uses fuzzy matching so you can just type "camcas" for
+  "Convert Case: camelCase".
+- Create a keyboard shortcut: Open Settings > Keymap and search for
+  "Convert Case" and create a keyboard shortcut for the desired action.
+
 Contributing
 ------------
 
