@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case conversion</name>
-  <version>0.6.1</version>
+  <version>0.6.2</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -17,6 +17,7 @@
         <li>lower case</li>
         <li>fLIP cASE</li>
         <li>Title Case</li>
+        <li>Sentence case</li>
         <li>dot.case</li>
       </ul>
       <p>How to use:</p>
@@ -30,6 +31,9 @@
 
   <change-notes><![CDATA[<html>
     <dl>
+      <dt>Version 0.6.2</dt>
+      <dd>Add <code>Convert case: Sentence case</code> action</dd>
+
       <dt>Version 0.6.1</dt>
       <dd>Add a short documentation on how to use the plugin</dd>
 
@@ -85,6 +89,9 @@
       </action>
       <action id="me.laria.code.idea_caseconv.TitleCaseAction" class="me.laria.code.idea_caseconv.TitleCaseAction"
               text="Convert Case: Title Case">
+      </action>
+      <action id="me.laria.code.idea_caseconv.SentenceCaseAction" class="me.laria.code.idea_caseconv.SentenceCaseAction"
+              text="Convert Case: Sentence case">
       </action>
       <action id="me.laria.code.idea_caseconv.DotCaseAction" class="me.laria.code.idea_caseconv.DotCaseAction"
               text="Convert Case: dot.case">

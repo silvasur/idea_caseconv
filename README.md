@@ -14,6 +14,7 @@ The plugin provides actions to convert to these cases:
 - `lower case`
 - `fLIP cASE`
 - `Title Case`
+- `Sentence case`
 - `dot.case`
 
 The Plugin was inspired by the [Case Conversion Plugin for SublimeText](https://packagecontrol.io/packages/Case%20Conversion).
