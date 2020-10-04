@@ -9,7 +9,7 @@ class WordSplitConverter {
         Pattern decamelize = Pattern.compile("(?<![A-Z])[A-Z]");
         s = decamelize.matcher(s).replaceAll(" $0");
 
-        String[] all_parts = s.split("[\\s_-]");
+        String[] all_parts = s.split("[\\s_.-]");
         ArrayList<String> parts = new ArrayList<>();
         for (String p : all_parts) {
             p = p.trim();
