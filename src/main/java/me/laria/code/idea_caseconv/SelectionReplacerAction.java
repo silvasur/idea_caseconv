@@ -9,8 +9,11 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
+import me.laria.code.idea_caseconv.settings.Settings;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 abstract class SelectionReplacerAction extends AnAction {
     @Override
@@ -42,10 +45,42 @@ abstract class SelectionReplacerAction extends AnAction {
                 continue;
             }
 
+            String selectedText = caret.getSelectedText();
+            assert selectedText != null; // because we checked .hasSelection() above, selectedText will not be null.
+
+            StringBuilder replacement = new StringBuilder();
+            switch (Settings.getInstance().newlineMode) {
+                case RECORD_SEPARATOR:
+                    Pattern p = Pattern.compile("\r?\n");
+                    Matcher m = p.matcher(selectedText);
+
+                    String record;
+                    int off = 0;
+                    while (m.find()) {
+                        record = selectedText.substring(off, m.start());
+                        if (!record.isEmpty()) {
+                            replacement.append(replace(record));
+                        }
+
+                        replacement.append(m.group(0)); // append the line separator
+
+                        off = m.end();
+                    }
+
+                    record = selectedText.substring(off);
+                    if (!record.isEmpty()) {
+                        replacement.append(replace(record));
+                    }
+                    break;
+                case WHITESPACE:
+                    replacement.append(replace(selectedText));
+                    break;
+            }
+
             replacements.add(new Replacement(
                 caret.getSelectionStart(),
                 caret.getSelectionEnd(),
-                this.replace(caret.getSelectedText())
+                replacement.toString()
             ));
         }
 

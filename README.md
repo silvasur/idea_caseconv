@@ -35,6 +35,19 @@ There are multiple ways to do this:
 - Create a keyboard shortcut: Open Settings > Keymap and search for
   "Convert Case" and create a keyboard shortcut for the desired action.
 
+Configuration
+-------------
+
+The plugin has a configuration page in the "Settings" window of the IDE.
+You can find it under Tools > Case conversion.
+
+Currently there is only one configuration option:
+
+- **Treat newline as**: Can be either "White space" in which case selected
+  line breaks will be treated like every other white space (i.e. as a word
+  separator), or it can be "Record separator" in which case each line will
+  be converted individually. The default is "White space".
+
 Contributing
 ------------
 

@@ -27,6 +27,14 @@
       <li>Use the Find Action feature: Bring up the &ldquo;Find Action&rdquo; search dialog (default keyboard shortcut is Ctrl+Shift+A) and type the name of the desired convert action (or type &ldquo;Convert Case&rdquo; to see all actions). Tip: This search uses fuzzy matching so you can just type &ldquo;camcas&rdquo; for &ldquo;Convert Case: camelCase&rdquo;.</li>
       <li>Create a keyboard shortcut: Open Settings > Keymap and search for &ldquo;Convert Case&rdquo; and create a keyboard shortcut for the desired action.</li>
       </ul>
+      <p>You can configure how newlines should be treated: Go to "Settings" > "Tools" > "Case conversion". The setting "Treat newline as" has these two options:</p>
+      <dl>
+        <dt>White space</dt>
+        <dd>Treat newline like other whitespace (i.e. as a word separator)</dd>
+
+        <dt>Record separator</dt>
+        <dd>Treat newline as a record separator. This converts every line individually</dd>
+      </dl>
     </html>]]></description>
 
   <change-notes><![CDATA[<html>
@@ -53,7 +61,13 @@
   <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+    <applicationService serviceImplementation="me.laria.code.idea_caseconv.settings.Settings" />
+    <applicationConfigurable
+            parentId="tools"
+            instance="me.laria.code.idea_caseconv.settings.Configurable"
+            id="me.laria.code.idea_caseconv.settings.Configurable"
+            displayName="Case conversion"
+    />
   </extensions>
 
   <actions>
@@ -98,5 +112,4 @@
       </action>
     </group>
   </actions>
-
 </idea-plugin>
