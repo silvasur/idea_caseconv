@@ -33,8 +33,10 @@ abstract class SelectionReplacerAction extends AnAction {
     public void actionPerformed(AnActionEvent anActionEvent) {
         Editor editor = anActionEvent.getData(CommonDataKeys.EDITOR);
         Project project = anActionEvent.getData(CommonDataKeys.PROJECT);
-        assert editor != null;
-        assert project != null;
+
+        if (editor == null || project == null) {
+            return;
+        }
 
         CaretModel caretModel = editor.getCaretModel();
         Document document = editor.getDocument();

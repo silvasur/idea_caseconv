@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case conversion</name>
-  <version>0.7.0</version>
+  <version>0.7.1</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -39,6 +39,9 @@
 
   <change-notes><![CDATA[<html>
     <dl>
+      <dt>Version 0.7.1</dt>
+      <dd>Fix crashing when an action is performed without a focussed editor</dd>
+
       <dt>Version 0.7.0</dt>
       <dd>Add setting for newline mode and fix converting *from* dot.case</dd>
 
