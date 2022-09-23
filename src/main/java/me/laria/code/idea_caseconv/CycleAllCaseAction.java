@@ -4,7 +4,7 @@ public class CycleAllCaseAction extends SelectionReplacerAction {
 
     private static int counter = 0;
 
-    private static String forwardEvent(final String s) {
+    private static String replaceString(final String s) {
         switch (ConversionType.fromValue(counter)) {
 
             case CAMEL:
@@ -43,6 +43,6 @@ public class CycleAllCaseAction extends SelectionReplacerAction {
     @Override
     protected String replace(String s) {
         updateCounter();
-        return forwardEvent(s);
+        return replaceString(s);
     }
 }
