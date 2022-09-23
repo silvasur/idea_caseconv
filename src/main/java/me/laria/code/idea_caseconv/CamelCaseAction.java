@@ -11,8 +11,12 @@ public class CamelCaseAction extends SelectionReplacerAction {
         return s.substring(0, 1).toUpperCase().concat(s.substring(1));
     }
 
+    public static String replaceString(String s) {
+        return WordSplitConverter.convert(s, "", (i, part) -> Optional.of(i == 0 ? part.toLowerCase() : ucfirst(part)));
+    }
+
     @Override
     protected String replace(String s) {
-        return WordSplitConverter.convert(s, "", (i, part) -> Optional.of(i == 0 ? part.toLowerCase() : ucfirst(part)));
+        return replaceString(s);
     }
 }
