@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "me.laria.code"
-version = "0.8.0"
+version = "0.8.1"
 
 repositories {
     mavenCentral()
@@ -18,6 +18,7 @@ intellij {
     type.set("IC") // Target IDE Platform
 
     plugins.set(listOf(/* Plugin Dependencies */))
+    updateSinceUntilBuild.set(false)
 }
 
 tasks {
@@ -28,11 +29,6 @@ tasks {
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions.jvmTarget = "17"
-    }
-
-    patchPluginXml {
-        sinceBuild.set("223")
-        untilBuild.set("500.*")
     }
 
     signPlugin {

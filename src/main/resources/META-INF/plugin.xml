@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>me.laria.code.idea_caseconv</id>
   <name>Case Conversion</name>
-  <version>0.8.0</version>
+  <version>0.8.1</version>
   <vendor email="laria@laria.me" url="https://code.laria.me">Laria Chabowski</vendor>
 
   <description><![CDATA[<html>
@@ -40,6 +40,9 @@
 
   <change-notes><![CDATA[<html>
     <dl>
+      <dt>Version 0.8.1</dt>
+      <dd>Replace usages of deprecated ServiceManager methods</dd>
+
       <dt>Version 0.8.0</dt>
       <dd>Compatibility 241.*</dd>
 
@@ -64,7 +67,7 @@
   </html>]]></change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="232"/>
+  <idea-version since-build="223"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
