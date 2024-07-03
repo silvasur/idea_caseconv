@@ -123,6 +123,10 @@
       <action id="me.laria.code.idea_caseconv.DotCaseAction" class="me.laria.code.idea_caseconv.DotCaseAction"
               text="Convert Case: dot.case">
       </action>
+
+      <action id="me.laria.code.idea_caseconv.CycleAllCaseAction" class="me.laria.code.idea_caseconv.CycleAllCaseAction"
+              text="Convert Case: Cycle All Cases">
+      </action>
     </group>
   </actions>
 </idea-plugin>

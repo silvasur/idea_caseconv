@@ -3,8 +3,8 @@ package me.laria.code.idea_caseconv;
 import java.util.Optional;
 
 public class SentenceCaseAction extends SelectionReplacerAction {
-    @Override
-    protected String replace(String s) {
+
+    public static String replaceString(String s) {
         return WordSplitConverter.convert(
                 s,
                 " ",
@@ -13,5 +13,10 @@ public class SentenceCaseAction extends SelectionReplacerAction {
                         : part
                 )
         );
+    }
+
+    @Override
+    protected String replace(String s) {
+        return replaceString(s);
     }
 }
